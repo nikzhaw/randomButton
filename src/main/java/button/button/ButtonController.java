@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 
 public class ButtonController {
 
+    public Button addButton;
     Generator answers = new Generator();
 
     @FXML
@@ -20,12 +21,17 @@ public class ButtonController {
     private TextField newAnswer;
 
 
-    public ButtonController(){
+    public ButtonController() {
         answers.setAnswers("Programieren");
         answers.setAnswers("Aus dem Fenster Springen");
-        answers.setAnswers("Kühlschrank leer Essen");
+        answers.setAnswers("Kühlschrank leer essen");
+
     }
 
+    @FXML
+    public  void initialize(){
+        addButton.disableProperty().bind(newAnswer.textProperty().isEmpty());
+    }
 
     @FXML
     protected void onHelloButtonClick() {
@@ -39,6 +45,11 @@ public class ButtonController {
     }
 
     public void addAnswer(ActionEvent actionEvent) {
-        answers.setAnswers("neuerText");
+        answers.setAnswers(newAnswer.getText());
+
     }
+
+
+
+
 }

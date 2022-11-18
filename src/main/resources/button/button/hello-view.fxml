@@ -5,15 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="300.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="button.button.ButtonController">
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="button.button.ButtonController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <ToolBar prefHeight="40.0" prefWidth="200.0">
      <items>
          <Label text="ToDo" />
-         <TextField id="newAnswer" />
-       <Button id="addAnswer" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addAnswer" text="Add" />
+         <TextField id="newAnswer" fx:id="newAnswer" />
+       <Button id="addAnswer" fx:id="addButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" onAction="#addAnswer" text="Add" />
      </items>
    </ToolBar>
 
